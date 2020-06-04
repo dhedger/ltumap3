@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title></title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
+  <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <main class="main-container">
+    <button class="btn" id="toggle-menu">Filter</button>
+    <div class="side-nav px-2">
+      <small class="close-nav text-right">
+        <i class="fa fa-times fa-2x"></i>
+      </small>
+
+      <div class="title-header">
+          <h1 class="title text-center">TITLE TEXT</h1>
+          <small class="text-box">text box</small>        
+      </div>
+      <div class="filter-section">
+        <form action="" class="form-horizontal mt-2">
+          <div class="form-group">
+            <label for="type">type</label>
+            <select name="type" id="type" class="form-control form-control-sm">
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="com">Company</label>
+            <select name="company" id="company" class="form-control form-control-sm" >
+              
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="score">Score</label>
+            <div class="input-group input-group-sm">
+              <div class="input-group-prepend">
+                <span class="min mr-1">10</span>
+              </div>
+
+              <input type="range" name="score" id="score" 
+              class="form-control form-control-sm" max="120" min="10" step="1">
+
+              <div class="input-group-prepend">
+                <span class="max ml-1">100</span>
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="form-group">
+            <label for="type">Date</label>
+            <!-- <input type="date" name="date" id="date" class="form-control form-control-sm"> -->
+            <input type="range" name="date" id="date" 
+                class="form-control form-control-sm" step="1" min="0" max="100">
+
+            <div class="ranges d-flex justify-content-between">
+              <p class="start-date"></p>
+              <p class="end-date"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+
+          </div>
+        </form>
+      </div>
+      
+    </div>
+    <div id='map'></div>
+  </main>
+
+  <div class="spinner-modal">
+    <div class="spinner-backdrop">
+      <!-- gif -->
+    </div>
+    <div class="spinning-box"></div>
+    <p class="spinner-status">Loading data ....</p>
+  </div>
+  
+  <!-- <script class=""></script> -->
+  <script async src="main.js"></script>
+  
+</body>
+
+</html>
