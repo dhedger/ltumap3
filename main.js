@@ -13,8 +13,9 @@ var transformRequest = (url, resourceType) => {
   var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/ioservicedesk/cjyfq2zsf56wl1ds8p1hc6xb2', //stylesheet location
-    center: [145.043982, -37.720710], // starting position
-    zoom: 15.5,// starting zoom
+    center: [144.910, -37.663], // starting position
+    zoom: 9.59,// starting zoom
+    pitch: 60
     transformRequest: transformRequest
   });
 
